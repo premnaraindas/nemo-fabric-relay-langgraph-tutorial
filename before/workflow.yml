@@ -1,0 +1,18 @@
+functions:
+  lookup_customer:
+    _type: lookup_customer
+  delete_customer:
+    _type: delete_customer
+
+llms:
+  default:
+    _type: openai
+    model_name: ${MODEL}
+    base_url: ${MODEL_BASE_URL}
+    api_key: ${MODEL_API_KEY}
+    temperature: 0.0
+
+workflow:
+  _type: tool_calling_agent
+  tool_names: [lookup_customer, delete_customer]
+  llm_name: default

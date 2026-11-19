@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "support_nat"
+version = "0.1.0"
+dependencies = ["nvidia-nat[langchain]"]
+
+[project.entry-points.'nat.components']
+support_nat = "support_nat.register"
+
+[tool.setuptools.packages.find]
+where = ["src"]

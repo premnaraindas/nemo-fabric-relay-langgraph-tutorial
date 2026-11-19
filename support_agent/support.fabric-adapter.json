@@ -1,0 +1,11 @@
+{
+  "contract_version": "fabric.adapter/v1alpha2",
+  "adapter_id": "example.support.langgraph",
+  "adapter_kind": "python",
+  "runner": { "module": "support_agent.adapter" },
+  "settings_schema": { "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "properties": {}, "additionalProperties": false },
+  "requirements": {},
+  "config": { "accepts": ["models", "models.base_url", "models.temperature"] },
+  "telemetry": { "providers": { "relay": { "outputs": ["atof"], "integration_modes": ["sdk"] } } },
+  "capabilities": { "cancellation": false, "service": false, "streaming": true, "updates": false }
+}
